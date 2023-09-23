@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pomodoro-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* padding: 10px;
+  border: 5px solid; */
+}
+
+.pomodoro-container #time {
+  width: 125px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.pomodoro-container #timer {
+  width: 600px;
+  text-align: center;
+  font-size: 120px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.pomodoro-container .pomodoro-button{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  font-weight: bold;    
 }
 
-.App-link {
-  color: #61dafb;
+.pomodoro-container .pomodoro-button button {
+  width: 125px;
+  height: 90px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#stopBtn {
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+#pauseBtn {
+  margin-top: 50px;
 }
