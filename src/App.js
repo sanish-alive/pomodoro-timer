@@ -1,6 +1,6 @@
-
 import './App.css';
 import { useState } from 'react';
+import ToDo from './ToDo';
 
 let timer;
 let isPaused = false;
@@ -82,28 +82,27 @@ function pausePomodoro() {
 function playSound() {
     var sound = new Audio('inclouds.mp3');
     sound.play();
-
-    setTimeout(function() {
-        sound.pause();
-        sound.currentTime = 0;
-    }, 4000);
 }
 
 function App() {
     const [minutes, setMinutes] = useState("25");
 
     return (
-    <div className="pomodoro-container">
-        <input type="text" id="time" value={minutes} onChange={(e) => setMinutes(e.target.value)}/><br/>
-        <div id="timer" style={{display: "none"}}>
-            <span id="minutes">--</span><span>:</span><span id="seconds">--</span>
+    <div className='main-container'>
+        <div className="pomodoro-container">
+            <input type="text" id="time" value={minutes} onChange={(e) => setMinutes(e.target.value)}/><br/>
+            <div id="timer" style={{display: "none"}}>
+                <span id="minutes">--</span><span>:</span><span id="seconds">--</span>
+            </div>
+            <div className="pomodoro-button">
+                <button onClick={() => startPomodoro(minutes)} id="startBtn">Start</button>
+                <button onClick={stopPomodoro} id="stopBtn" style={{display: "none"}}><i className="fas fa-stop"></i></button>
+                <button onClick={pausePomodoro} id="pauseBtn" style={{display: "none"}}><i className="fas fa-pause"></i></button>
+            </div>
         </div>
-        <div className="pomodoro-button">
-            <button onClick={() => startPomodoro(minutes)} id="startBtn">Start</button>
-            <button onClick={stopPomodoro} id="stopBtn" style={{display: "none"}}><i className="fas fa-stop"></i></button>
-            <button onClick={pausePomodoro} id="pauseBtn" style={{display: "none"}}><i className="fas fa-pause"></i></button>
-        </div>
+        <ToDo />
     </div>
+    
     );
 }
 

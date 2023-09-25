@@ -1,15 +1,26 @@
+.main-container{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
 .pomodoro-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 330px;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* padding: 10px;
-  border: 5px solid; */
+  padding: 10px; */
 }
 
-.pomodoro-container #time {
+.pomodoro-container #time{
   width: 125px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -17,14 +28,15 @@
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
+  border: none;
 }
 
 .pomodoro-container #timer {
+  display: block;
   width: 600px;
   text-align: center;
   font-size: 120px;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
@@ -40,15 +52,93 @@
   width: 125px;
   height: 90px;
   border-radius: 10px;
+  border: none;
   font-size: 25px;
   font-weight: bold;
+  background-color: antiquewhite;
+  color: dimgray;
 }
 
 #stopBtn {
   margin-right: 20px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 #pauseBtn {
-  margin-top: 50px;
+  margin-top: 10px;
+}
+
+.todo-container{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-container .todo-input{
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container .todo-input .input{
+  width: 80%;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+.todo-container .todo-input .todo-btn{
+  width: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: antiquewhite;
+  color: dimgray;
+  margin-left: 10px;
+}
+
+.todo-container .todo-detail {
+  width: 600px;
+  color: white
+}
+
+.todo-container .todo-detail ol {
+  text-align: justify;
+  padding-inline-start: 20px;
+  padding-inline-end: 5px;
+}
+
+.todo-container .todo-detail ol li{
+  padding-bottom: 8px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.todo-container .todo-detail ol li:hover {
+  background-color: gray;
+}
+
+#check{
+  margin-left: 15px;
+  color: lightgreen;
+  float: right;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#delete {
+  margin-left: 15px;
+  color: red;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 20px;
 }
