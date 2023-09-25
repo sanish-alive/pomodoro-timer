@@ -101,6 +101,12 @@ function App() {
             </div>
         </div>
         <ToDo />
+        <div className='github' onClick={() => {
+            window.open("https://github.com/mostanglan/pomodoro-timer", "_blank")
+        }}
+        alt="about me">
+            <i class="fab fa-github"></i>
+        </div>
     </div>
     
     );
