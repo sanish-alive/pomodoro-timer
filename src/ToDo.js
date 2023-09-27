@@ -5,7 +5,12 @@ function ToDo() {
     const [todoList, setTodoList] = useState([]);
     const [id, setId] = useState(0);
 
-    const handleAddTodo = () => {
+    const handleAddTodo = (event) => {
+        event.preventDefault();
+        if(!inputTask.trim()){
+            alert("invalid task");
+            return;
+        }
         const newTask = {
             id: id,
             detail: inputTask,
@@ -39,7 +44,7 @@ function ToDo() {
             <div className="todo-input">
                 <input className="input" type="text" value={inputTask}
                 onChange={(e) => setInputTask(e.target.value)} />
-                <button className="todo-btn" onClick={handleAddTodo}>
+                <button className="todo-btn" onClick={(event) => {handleAddTodo(event)}}>
                 <i class="fas fa-plus"></i>
                 </button>
             </div>

@@ -149,3 +149,49 @@
   right: 10px;
   font-size: 30px;
 }
+
+
+/* Mobile Compatibility Styles */
+@media (max-width: 768px) {
+  .main-container {
+      margin-top: 50px;
+  }
+
+  .pomodoro-container {
+      width: 90%; /* Adjust width for mobile */
+  }
+
+  .pomodoro-container #time, .pomodoro-container #timer {
+      width: 100%; /* Full width on mobile */
+      font-size: 60px; /* Adjust font size */
+  }
+
+  .pomodoro-container .pomodoro-button button {
+      width: 80px; /* Adjust button size */
+      height: 60px;
+      font-size: 20px;
+  }
+
+  .todo-container {
+      width: 90%; /* Adjust width for mobile */
+  }
+
+  .todo-container .todo-input {
+      width: 100%; /* Full width on mobile */
+      flex-direction: row; /* Stack input and button vertically */
+      align-items: stretch;
+  }
+
+  .todo-container .todo-input .input {
+      width: 100%; /* Full width on mobile */
+      margin-bottom: 10px; /* Space between input and button */
+  }
+
+  .todo-container .todo-detail {
+      width: 100%; /* Full width on mobile */
+  }
+
+  .github {
+      font-size: 20px; /* Adjust icon size */
+  }
+}
